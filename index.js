@@ -1,5 +1,6 @@
 function takeANumber(line, name) {
-  return `Welcome, ${name}. You are number ${(line.indexOf(name))+1} in line.`
+  var place = line.indexOf(name) + 1;
+  return `Welcome, ${name}. You are number ${place} in line.`
 }
 
 function nowServing(line) {
@@ -18,11 +19,12 @@ function currentLine(line) {
   else {
     var string = "The line is currently: ";
     for (var i=0; i<line.length; i++) {
+      var place = i+1;
       if (i+1 === line.length) {
-        string += `${i+1}. ${line[i]}`
+        string += `${place}. ${line[i]}`
       }
       else {
-        string += `${i+1}. ${line[i]}, `
+        string += `${place}. ${line[i]}, `
       }
     }
     return string;
