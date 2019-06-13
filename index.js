@@ -1,5 +1,8 @@
 function takeANumber(line, name) {
-  var place = (line.indexOf(name)) + 1;
+  var index = line.indexOf(name);
+  console.log(index);
+  index += 1;
+  console.log(index);
   return `Welcome, ${name}. You are number ${place} in line.`
 }
 
