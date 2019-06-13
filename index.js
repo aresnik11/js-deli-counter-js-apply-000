@@ -22,7 +22,7 @@ function currentLine(line) {
         string += `${i+1}. ${line[i]}`
       }
       else {
-        string += `${i+1}. ${line[i], }`
+        string += `${i+1}. ${line[i]}, `
       }
     }
     return string;
